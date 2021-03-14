@@ -1,0 +1,15 @@
+Package: jamie
+Type: Package
+Title: Functions written and used by Jamie Griffith
+Version: 0.1.0
+Author: Jamie Griffith
+Maintainer: Jamie Griffith <jameswgriffith@gmail.com>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    polycor,
+    psych
+RoxygenNote: 7.1.1
