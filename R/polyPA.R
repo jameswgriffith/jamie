@@ -56,7 +56,7 @@ polyPA <- function(data,
 
       #3. Discretization of Random Variables
       splt <- quantile(x[, j], probs = ucp[[j]])
-      for(k in 1:(length(splt)-1))
+      for(k in 1:(length(splt) - 1))
         y[which(x[, j] >= splt[k] & x[, j] <= splt[k + 1]), j] <- k
     }
 
