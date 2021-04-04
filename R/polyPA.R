@@ -43,12 +43,12 @@ polyPA <- function(data,
 
     #1. Calculate UCPs
   ucp <- list()
-  for(j in seq_along(p)) {
+  for(j in 1:p) {
     freq <- table(data[, j])
     ucp[[j]] <- c(0, cumsum(freq) / sum(freq))
   }
   ev <- matrix(, replications, p)
-  for(i in seq_along(replications)) {
+  for(i in 1:replications) {
 
     #2. Generate Random Samples
     x <- y <- matrix(rnorm(n * p), n, p)
@@ -67,7 +67,10 @@ polyPA <- function(data,
     ev[i, ] <- eigen(R)$values
   }
   list(sample_ev = eigen(polychoric(data)$rho)$values,
-       reference_ev = apply(ev, 2, quantile, probs = prc))
+       reference_ev = apply(ev,
+							2,
+							quantile,
+							probs = prc))
 }
 
 # Parallel Analysis With Categorical Variables: Impact of Category
