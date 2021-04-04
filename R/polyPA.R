@@ -52,7 +52,7 @@ polyPA <- function(data,
 
     #2. Generate Random Samples
     x <- y <- matrix(rnorm(n * p), n, p)
-    for(j in seq_along(p)) {
+    for(j in 1:p) {
 
       #3. Discretization of Random Variables
       splt <- quantile(x[, j], probs = ucp[[j]])
