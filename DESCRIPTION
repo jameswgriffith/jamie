@@ -1,11 +1,11 @@
 Package: jamie
 Type: Package
 Title: Functions written and used by Jamie Griffith
-Version: 0.1.0
+Version: 0.1.1
 Author: Jamie Griffith
 Maintainer: Jamie Griffith <jameswgriffith@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Various functions used by Jamie Griffith.
+    Most of these functions are used for analysing questionnaire data.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -13,3 +13,6 @@ Imports:
     polycor,
     psych
 RoxygenNote: 7.1.1
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
