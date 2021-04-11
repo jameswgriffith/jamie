@@ -2,33 +2,37 @@
 % Please edit documentation in R/pomp.R
 \name{pomp}
 \alias{pomp}
-\title{polyPA}
+\title{pomp}
 \usage{
 pomp(raw_scores, min_possible, max_possible)
 }
 \arguments{
-\item{data}{Categorical input of questionnaire items}
+\item{raw_scores}{A vector of numeric questionnaire scores.}
 
-\item{replications}{The number of replications in the simulation}
+\item{min_possible}{The minimum possible value of the questionnaire.}
 
-\item{prc}{The percentile for obtaining the reference eigenvalues}
+\item{max_possible}{The maximum possible value of the questionnaire.}
 }
 \value{
-Empirical and reference eigenvalues
+Percent of Maximum Possible Scores
 }
 \description{
-Conducts a parallel analysis using the method of Lubbe (2019).
-The code in this function is adapted from the key reference (see below).
-This function relies on the psych package to calculate the polychoric correlations.
+Takes a questionnaire score and rescales it to a 0-100% metric.\cr
+A score of 0% is the minimum possible value of the scale; a score of 100%
+is the maximum possible value of the scale.\cr\cr
+This function is based on the work of Patricia Cohen et al. (1999)
+Cohen, P., Cohen, J., Aiken, L. S., & West, S. G. (1999).
+The problem of units and the circumstance for POMP.
+Multivariate behavioral research, 34(3), 315-346.
 }
 \section{Key Reference}{
- \url{https://doi.org/10.1037/met0000171}
+ \url{https://doi.org/10.1207/S15327906MBR3403_2}
 }
 
 \examples{
 \dontrun{
 
-pa_results <- polyPA(hl[1:10], 500, .99)
+pomp(test_scores, 10, 60)
 
 }
 }
