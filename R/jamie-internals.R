@@ -129,3 +129,52 @@ recode_items_in_matrix <- function(items_matrix, original, recoded) {
         original = original,
         recoded = recoded)
 }
+
+
+# Create matrix based on dataframe columns --------------------------------
+#' col_pairs_to_matrix
+#'
+#' @description This function populates a matrix[i, j] based on the columns of
+#' a dataframe where i and j are both indices for 1 to the number of columns in
+#' x.
+#'
+#' @details The input must be a dataframe or an error will result.
+#'
+#' @param x A dataframe.
+#'
+#' @param FUN A function to be applied to each pair of columns in x.
+#'
+#' @param ... Additional arguments to be passed to FUN.
+#'
+#' @return A matrix[i, j] based on all pairs of columns in x.
+#'
+#' @examples
+#'\dontrun{
+#' col_pairs_to_matrix(a_dataframe, NMI))
+#' }
+col_pairs_to_matrix <- function(x, FUN, ...){
+
+  if(!is.data.frame(x)) {
+    stop("x must be a dataframe. Please try again.")
+  }
+
+  if(ncol(x) < 2) {
+    stop("x must have 2 or more columns. Please try again.")
+  }
+
+  x <- as.data.frame(x)
+  r <- c <- ncol(x)
+  row_names <- col_names <- names(x)
+  m <- matrix(NA,
+              nrow = r,
+              ncol = c,
+              dimnames = list(row_names, col_names))
+  FUN <- match.fun(FUN)
+  for(i in seq_len(r)) {
+    for(j in seq_len(c)) {
+      m[i, j] <- do.call(FUN,
+                         list(x[, i], x[, j]))
+    }
+  }
+  m
+}

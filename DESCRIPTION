@@ -11,7 +11,8 @@ Encoding: UTF-8
 LazyData: true
 Imports:
     polycor,
-    psych
+    psych,
+    aricode
 RoxygenNote: 7.1.1
 Suggests: 
     testthat (>= 3.0.0)
