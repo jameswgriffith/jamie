@@ -2,7 +2,7 @@
 % Please edit documentation in R/collapse.R
 \name{merge_right_or_left}
 \alias{merge_right_or_left}
-\title{An internal function to that tells collapse whether to collapse with the 
+\title{An internal function to that tells collapse whether to collapse with the
 category to the left or to the right, depending on which adjacent category
 is smaller, or based on user preference in case of a tie.}
 \usage{
@@ -13,7 +13,7 @@ merge_right_or_left(v, i, prefer = c("left", "right"))
 
 \item{i}{An index based on a table of sorted (ascending) response
 categories of v. i must range from 1 to the maximum number of response
-categories. For example, for response categories 1, 2, 3, 4, and 5, 
+categories. For example, for response categories 1, 2, 3, 4, and 5,
 i can be 1, 2, 3, 4, or 5.}
 
 \item{prefer}{A user supplies preference of whether to merge left or right
@@ -24,7 +24,7 @@ in the case of a tie (i.e., equal response counts at i - 1 and i + 1.}
 }
 \description{
 An internal function to that tells collapse whether to collapse
-with the category to the left or to the right, depending on which adjacent 
+with the category to the left or to the right, depending on which adjacent
 category is smaller, or based on user preference in case of a tie.
 }
 \note{

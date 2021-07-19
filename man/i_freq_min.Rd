@@ -13,7 +13,7 @@ i_freq_min(tbl, return_which = c("min", "max"))
 categories.}
 
 \item{return_which}{In situations in which more than one response category
-is the least frequent (i.e., with the lowest frequency count), should the 
+is the least frequent (i.e., with the lowest frequency count), should the
 function return the minimum response (i.e., the leftmost category if sorted in
 ascending order) or the maximum response (i.e., the rightmost category if
 sorted in ascending order). The default is "min" for "minimum" or the

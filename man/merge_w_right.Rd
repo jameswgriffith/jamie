@@ -2,7 +2,7 @@
 % Please edit documentation in R/collapse.R
 \name{merge_w_right}
 \alias{merge_w_right}
-\title{An internal function to that takes a response category found in a 
+\title{An internal function to that takes a response category found in a
 sorted table of v,  at index i in this table, and merges it with
 the adjacent category to the right at i + 1.}
 \usage{
@@ -12,7 +12,7 @@ merge_w_right(v, i)
 \item{v}{A vector of response categories.}
 
 \item{i}{An index of the to-be-collapsed category. i must range from 1 to
-the maximum number of response categories minus 1. For example, for response 
+the maximum number of response categories minus 1. For example, for response
 categories 1, 2, 3, 4, and 5, "5" is not possible because there is no place
 to the right. Thus, i can be 1, 2, 3, or 4.}
 }

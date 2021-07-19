@@ -41,7 +41,7 @@ category. If there is more than one response category with the lowest
 frequency count, does the user prefer starting with the leftmost or
 rightmost one?}
 
-\item{warn_me}{collapse() will provide warnings about the collapsing, 
+\item{warn_me}{collapse() will provide warnings about the collapsing,
 especially when it is important to check the results, or to tell the
 user if there is a potential problem with the data. The warnings can
 be turned off using this parameter.}
@@ -56,14 +56,14 @@ with the data).
 This function takes a vector (v) of response category data, looks
 for response categories that are sparse (e.g., with fewer that 5 responses
 in the data set). Starting with the least frequent responses, the function
-will merge them to an adjacent category. The function will merge the 
+will merge them to an adjacent category. The function will merge the
 whichever adjacent response category has fewer responses; in the case of
 ties the function will follow a user-specified preference (right or left).
 The parameters "prefer" and "merge_first" may result in slightly different
 patterns of merging depending on the pattern of sparse response categories.
 }
 \details{
-NA is not considered a response type. It is not recommended to 
+NA is not considered a response type. It is not recommended to
 recode NA into a response type for this function.
 }
 \examples{
