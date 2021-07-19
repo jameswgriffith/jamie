@@ -16,7 +16,8 @@ stop and return an error message.}
 \item{min_num_items}{The minimum number of items needed to score the
 questionnaire. If not enough items are present, the score will be NA.
 If some items are missing, but the number of non-missing items is
-min_num_items or higher, then the score will be prorated.}
+min_num_items or higher, then the score will be prorated.
+By default, all items are required}
 }
 \value{
 Scores for each case (i.e., row)
@@ -25,15 +26,6 @@ Scores for each row
 }
 \description{
 Takes a dataframe of numeric items and calculates a score
-
-Takes a dataframe of numeric items and calculates a score
-by multiplying the number of items by the mean item response.
-If no items are missing, this is equivalent to summing the items.
-If one or more items are missing, this is equivalent to treating
-the missing items as the mean value of the non-missing items,
-and then summing all of the items. This practice is known as
-"prorating". A score is only returned if the minimum number
-of items (or greater) is present.
 }
 \examples{
 \dontrun{

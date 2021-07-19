@@ -1,6 +1,4 @@
-#' score_surveys
-#'
-#'Takes a dataframe of numeric items and calculates a score
+#' Takes a dataframe of numeric items and calculates a score
 #' by multiplying the number of items by the mean item response.
 #' If no items are missing, this is equivalent to summing the items.
 #' If one or more items are missing, this is equivalent to treating
@@ -16,8 +14,11 @@
 #' questionnaire. If not enough items are present, the score will be NA.
 #' If some items are missing, but the number of non-missing items is
 #' min_num_items or higher, then the score will be prorated.
+#' By default, all items are required
 #'
 #' @return Scores for each row
+#'
+#' @export
 #'
 #' @examples
 #' # score_surveys(rrs, 10)
